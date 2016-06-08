@@ -1,5 +1,5 @@
 resources:
-  - name: shiptest1-image1
+  - name: shiptest1-image2
     type: image
     integration: revathi-docker
     source:
