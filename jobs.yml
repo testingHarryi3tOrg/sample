@@ -1,11 +1,12 @@
 jobs:
-  - name: generate-manifest
+  - name: job-image
     type: manifest
     steps:
-      - GET nginx-image
+      - GET shiptest1-image
 
-  - name: deploy-service
-    type: ecsDeploy
+  - name: job-repo
+    type: manifest
     steps:
-      - GET generate-manifest
-      - GET myEcsCluster
+      - GET samplePyt
+
+      
