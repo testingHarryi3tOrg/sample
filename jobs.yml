@@ -11,4 +11,8 @@ jobs:
       - GET project1-test
       - PUT image1-test
 
-      
+  - name: job13
+    type: manifest
+    steps:
+      - GET image1-test
+      - PUT image2-test   
