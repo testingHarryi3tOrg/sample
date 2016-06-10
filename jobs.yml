@@ -1,12 +1,14 @@
 jobs:
-  - name: job-image
+  - name: job11
     type: manifest
     steps:
-      - GET shiptest1-image
+      - GET image1-test
+      - GET image2-test
 
-  - name: job-repo
+  - name: job12
     type: manifest
     steps:
-      - GET samplePyt
+      - GET project1-test
+      - PUT image1-test
 
       
