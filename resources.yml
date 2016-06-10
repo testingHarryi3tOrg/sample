@@ -1,18 +1,25 @@
 resources:
-  - name: shiptest1-image2
+  - name: image1-test
     type: image
-    integration: revathi-docker
+    integration: docker_integration
     source:
       name: "revathird/sample_node"
       isPull: true
       tag: latest
   
-  - name: samplePyt
+  - name: image2-test
+    type: image
+    integration: docker_integration
+    source:
+      name: "revathird/imagenode"
+      isPull: true
+      tag: latest
+  - name: project1-test
     type: gitRepo
     integration: github
     source:
-      name: "shiphitchcock3/samplePyt" #you should've access to this project (even if it's public)
-      branch: TEST
+      name: "RevathiRD/samplePyt" #you should've access to this project (even if it's public)
+      branch: master
 
 
  # - name: myEcsCluster
