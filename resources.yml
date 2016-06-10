@@ -20,6 +20,8 @@ resources:
     source:
       name: "RevathiRD/samplePyt" #you should've access to this project (even if it's public)
       branch: master
+      
+      
 
 
  # - name: myEcsCluster
