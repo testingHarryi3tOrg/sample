@@ -18,3 +18,8 @@ jobs:
       - GET: image1-test
       - PUT: image2-test   
       - PUT: image3-test
+  - name: job14
+    type: manifest
+    steps:
+      - GET: image2-test
+      
