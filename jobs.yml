@@ -10,6 +10,7 @@ jobs:
     steps:
       - GET: project1-test
       - PUT: image1-test
+      - PUT: image3-test
 
   - name: job13
     type: manifest
