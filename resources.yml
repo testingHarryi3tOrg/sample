@@ -14,6 +14,13 @@ resources:
       name: "revathird/imagenode"
       isPull: true
       tag: latest
+  - name: image3-test
+    type: image
+    integration: docker_integration
+    source:
+      name: "revathird/imagenode"
+      isPull: true
+      tag: latest
   - name: project1-test
     type: gitRepo
     integration: github
