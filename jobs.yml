@@ -4,6 +4,7 @@ jobs:
     steps:
       - GET: image1-test
       - GET: image2-test
+      - GET: s16
      # - PUT: image3-test
 
   - name: job12
