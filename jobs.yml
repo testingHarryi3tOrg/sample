@@ -12,6 +12,23 @@ jobs:
       - GET: project1-test
       - PUT: image1-test
       - PUT: image2-test
+      - PUT: s1
+      - PUT: s2
+      - PUT: s3
+      - PUT: s4
+      - PUT: s5
+      - PUT: s6
+      - PUT: s7
+      - PUT: s8
+      - PUT: s9
+      - PUT: s10
+      - PUT: s11
+      - PUT: s13
+      - PUT: s12
+      - PUT: s14
+      - PUT: s15
+      - PUT: s16
+      
 
   - name: job13
     type: manifest
