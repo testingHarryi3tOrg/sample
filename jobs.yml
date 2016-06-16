@@ -35,6 +35,8 @@ jobs:
     type: manifest
     steps:
       - GET: image1-test
+      - GET: s15
+      - GET: s16
       
       
       
