@@ -3,9 +3,7 @@ jobs:
     type: manifest
     steps:
       - GET: s1
-      - GET: s3
       - PUT: s2
-      - PUT: s4
       
       
       
