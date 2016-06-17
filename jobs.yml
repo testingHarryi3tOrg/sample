@@ -28,6 +28,14 @@ jobs:
       - GET: s15
       - GET: s16
       - PUT: s5
+  
+  - name: job14
+    type: ecsDeploy
+    steps:
+      - GET: s6
+      - GET: project1-test
+      - PUT: s7
+      - PUT: image1-test
       
       
       
