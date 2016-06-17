@@ -8,36 +8,6 @@ jobs:
       - GET: s8
       - PUT: s3
       - PUT: s4
-     # - PUT: image3-test
-
-  - name: job12
-    type: manifest
-    steps:
-      - GET: project1-test
-      - GET: s1
-      - GET: s2
-      - PUT: image1-test
-      - PUT: image2-test
-      - PUT: s15
-      - PUT: s16
-      - PUT: job11
-      
-
-  - name: job13
-    type: manifest
-    steps:
-      - GET: image1-test
-      - GET: s15
-      - GET: s16
-      - GET: s6
-      - GET: s9
-      - PUT: s5
-  
-  - name: job14
-    type: ecsDeploy
-    steps:
-      - GET: s6
-      - PUT: s7
       
       
       
