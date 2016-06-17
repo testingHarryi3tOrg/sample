@@ -1,35 +1,4 @@
 resources:
-  - name: image1-test
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-  
-  - name: image2-test
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-  - name: image3-test
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-
-  - name: project1-test
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-      
   - name: s1
     type: image
     integration: dockerhub
