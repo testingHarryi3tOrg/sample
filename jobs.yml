@@ -4,7 +4,7 @@ jobs:
     steps:
       - GET: s1
       - GET: s2
-      - PUT: s2
+      - PUT: s3
       - PUT: s4
       
       
