@@ -29,6 +29,7 @@ jobs:
       - GET: image1-test
       - GET: s15
       - GET: s16
+      - GET: s6
       - PUT: s5
   
   - name: job14
