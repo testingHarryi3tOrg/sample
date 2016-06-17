@@ -5,6 +5,7 @@ jobs:
       - GET: image1-test
       - GET: image2-test
       - GET: s16
+      - GET: s8
       - PUT: s3
       - PUT: s4
      # - PUT: image3-test
