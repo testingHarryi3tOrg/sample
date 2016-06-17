@@ -37,9 +37,7 @@ jobs:
     type: ecsDeploy
     steps:
       - GET: s6
-      - GET: project1-test
       - PUT: s7
-      - PUT: image1-test
       
       
       
