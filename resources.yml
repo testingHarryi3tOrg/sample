@@ -30,32 +30,3 @@ resources:
       name: "library/busybox"
       isPull: true
       tag: latest
-  
-  - name: s5
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-  
-  - name: s6
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest
-  
-  
-  
-      
-      
-
-
- # - name: myEcsCluster
-  #  type: ecsCluster
-   # integration: pranay-ecs
-    #source:
-     # name : "test-cluster" #name of the cluster we are deploying
-      #region: "us-west-2"
