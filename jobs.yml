@@ -2,12 +2,8 @@ jobs:
   - name: job11
     type: manifest
     steps:
-      - GET: image1-test
-      - GET: image2-test
-      - GET: s16
-      - GET: s8
-      - PUT: s3
-      - PUT: s4
+      - GET: s1
+      - PUT: s2
       
       
       
