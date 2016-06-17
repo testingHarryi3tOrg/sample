@@ -19,6 +19,7 @@ jobs:
       - PUT: image2-test
       - PUT: s15
       - PUT: s16
+      - PUT: job11
       
 
   - name: job13
