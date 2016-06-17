@@ -13,7 +13,6 @@ jobs:
       - GET: project1-test
       - PUT: image1-test
       - PUT: image2-test
-      - PUT: s1
       - PUT: s15
       - PUT: s16
       
