@@ -44,3 +44,11 @@ resources:
     source:
       name: "harryi3t/e2e"
       branch: "master"
+  
+  - name: s5
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest
