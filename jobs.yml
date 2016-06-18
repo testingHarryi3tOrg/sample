@@ -15,6 +15,12 @@ jobs:
       - PUT: s3
       - PUT: s4
       
+  - name: job3
+    type: manifest
+    steps:
+      - GET: s3
+      - PUT: s5
+      
       
       
       
