@@ -36,3 +36,9 @@ resources:
     integration: git
     source:
       name: "harryi3t/box"
+      
+  - name: e2e
+    type: gitRepo
+    integration: git
+    source:
+      name: "harryi3t/e2e"
