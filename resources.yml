@@ -36,6 +36,7 @@ resources:
     integration: git
     source:
       name: "harryi3t/box"
+      branch: "master"
       
   - name: e2e
     type: gitRepo
