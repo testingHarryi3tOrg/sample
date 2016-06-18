@@ -42,3 +42,4 @@ resources:
     integration: git
     source:
       name: "harryi3t/e2e"
+      branch: "master"
