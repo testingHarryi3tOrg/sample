@@ -19,8 +19,8 @@ jobs:
     type: manifest
     steps:
       - GET: s3
-      - PUT: s5
-      
+    # - PUT: s5
+    
       
       
       
