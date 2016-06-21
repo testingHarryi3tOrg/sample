@@ -5,7 +5,6 @@ jobs:
       - GET: s1
       - PUT: s3
       - PUT: s4
-      - PUT: job4
       
   - name: job2
     type: manifest
@@ -24,7 +23,6 @@ jobs:
     type: manifest
     steps:
       - GET: s5
-      - GET: job1
      
       
       
