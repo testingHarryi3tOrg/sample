@@ -31,20 +31,6 @@ resources:
       isPull: true
       tag: latest
   
-  - name: box
-    type: gitRepo
-    integration: git
-    source:
-      name: "harryi3t/box"
-      branch: "master"
-      
-  - name: e2e
-    type: gitRepo
-    integration: git
-    source:
-      name: "harryi3t/e2e"
-      branch: "master"
-  
   - name: s5
     type: image
     integration: dockerhub
