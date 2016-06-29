@@ -16,6 +16,7 @@ jobs:
   - name: job3
     type: manifest
     steps:
+      - GET: s2
       - GET: s3
       - PUT: s5
      
@@ -24,7 +25,6 @@ jobs:
     steps:
       - GET: s5
       - GET: s3
-      - GET: s2
       - GET: job1
      
       
