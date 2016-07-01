@@ -5,7 +5,7 @@ resources:
     source:
       name: "library/busybox"
       isPull: true
-      tag: latest
+      tag: latest.1
   
   - name: s2
     type: image
