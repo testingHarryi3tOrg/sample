@@ -6,7 +6,7 @@ resources:
       name: "library/busybox"
       isPull: true
       tag: latest.1
-  
+
   - name: s2
     type: image
     integration: dockerhub
@@ -14,7 +14,7 @@ resources:
       name: "library/busybox"
       isPull: true
       tag: latest
-  
+
   - name: s3
     type: image
     integration: dockerhub
@@ -22,7 +22,7 @@ resources:
       name: "library/busybox"
       isPull: true
       tag: latest
-  
+
   - name: s4
     type: image
     integration: dockerhub
@@ -30,7 +30,7 @@ resources:
       name: "library/busybox"
       isPull: true
       tag: latest
-  
+
   - name: s5
     type: image
     integration: dockerhub
