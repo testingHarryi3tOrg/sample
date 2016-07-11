@@ -5,6 +5,7 @@ jobs:
       - GET: s1
       - PUT: s3
       - PUT: s4
+      - GET: job1-trigger
       
   - name: job2
     type: manifest
