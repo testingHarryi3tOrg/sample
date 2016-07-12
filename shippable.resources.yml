@@ -1,40 +1,144 @@
 resources:
-  - name: s1
+  - name: dv-repo
     type: image
     integration: dockerhub
     source:
       name: "library/busybox"
       isPull: true
       tag: latest.1
-  
-  - name: s2
+
+  - name: box-repo
     type: image
     integration: dockerhub
     source:
       name: "library/busybox"
       isPull: true
-      tag: latest
-  
-  - name: s3
+      tag: latest.1
+
+  - name: dv-img
     type: image
     integration: dockerhub
     source:
       name: "library/busybox"
       isPull: true
-      tag: latest
-  
-  - name: s4
+      tag: latest.1
+
+  - name: trigger-test-deploy
     type: image
     integration: dockerhub
     source:
       name: "library/busybox"
       isPull: true
-      tag: latest
-  
-  - name: s5
+      tag: latest.1-dv
+
+  - name: dv-img-opts
     type: image
     integration: dockerhub
     source:
       name: "library/busybox"
       isPull: true
-      tag: latest
+      tag: latest.1
+
+  - name: box-img
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: box-img-opts
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: trigger-test-deploy
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1-box
+
+  - name: box-t-tpc-params
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: box-t-params
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: env-test-triton
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: trigger-test-deploy
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1-box
+
+  - name: box-t-params
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: box-t-ecs-params
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: env-test-ecs
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: env-test-ecs
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
+
+  - name: trigger-test-deploy
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1-dv
+
+  - name: dv-params
+    type: image
+    integration: dockerhub
+    source:
+      name: "library/busybox"
+      isPull: true
+      tag: latest.1
