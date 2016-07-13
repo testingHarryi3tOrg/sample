@@ -1,144 +1,73 @@
 resources:
-  - name: dv-repo
+  - name: image1-test
     type: image
     integration: dockerhub
     source:
-      name: "library/busybox"
+      name: "revathird/sample_node"
       isPull: true
-      tag: latest.1
+      tag: latest
 
-  - name: box-repo
+  - name: image2-test
     type: image
     integration: dockerhub
     source:
-      name: "library/busybox"
+      name: "revathird/imagenode"
       isPull: true
-      tag: latest.1
+      tag: latest
+  - name: image3-test
+    type: image
+    integration: dockerhub
+    source:
+      name: "revathird/imagenode"
+      isPull: true
+      tag: latest
+  - name: image4-test
+    type: image
+    integration: dockerhub
+    source:
+      name: "revathird/imagenode"
+      isPull: true
+      tag: latest
+  - name: image5-test
+    type: image
+    integration: dockerhub
+    source:
+      name: "revathird/sample_node"
+      isPull: true
+      tag: latest
+  - name: test1
+    type: image
+    integration: dockerhub
+    source:
+      name: "revathird/sample_node"
+      isPull: true
+      tag: latest
 
-  - name: dv-img
+  - name: pipe1-image
     type: image
     integration: dockerhub
     source:
-      name: "library/busybox"
+      name: "revathird/sample_node"
       isPull: true
-      tag: latest.1
+      tag: latest
 
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
+  - name: pipe1-opts
+    type: dockerOptions
     source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1-dv
+      memory: 64
+      cpu-shares: 256
+      portMappings:
+        - "80:80"
 
-  - name: dv-img-opts
-    type: image
-    integration: dockerhub
+  - name: pipe1-params
+    type: params
     source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: box-img
-    type: image
-    integration: dockerhub
+      params:
+        MONGO_API_URL: "localhost:28017"
+        FOO: "bar"
+  - name: env-test
+    type: ecsCluster
+    integration: ecsdeploy
     source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: box-img-opts
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1-box
-
-  - name: box-t-tpc-params
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: box-t-params
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: env-test-triton
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1-box
-
-  - name: box-t-params
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: box-t-ecs-params
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: env-test-ecs
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: env-test-ecs
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
-
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1-dv
-
-  - name: dv-params
-    type: image
-    integration: dockerhub
-    source:
-      name: "library/busybox"
-      isPull: true
-      tag: latest.1
+      name : "testCL" #name of the cluster we are deploying
+      region: "us-west-2"

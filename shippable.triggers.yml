@@ -1,5 +1,13 @@
 triggers:
-   - name: job1-trigger
-     type: trigger
-     source:
-       counter: 1
+
+  - name: trigger-dv-man
+    type: trigger
+    source:
+      message: 'tesetinwglthtbth12 triifgfuggujythree in yml oekke13ewuh52122'
+      counter: 2
+
+  - name: triggertest2
+    type: trigger
+    source:
+      message: 'tesetinwglthtbth12 triifgfuggujythree in yml oekke13ewuh52322'
+      counter: 2

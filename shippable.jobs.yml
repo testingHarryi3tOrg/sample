@@ -1,50 +1,37 @@
 jobs:
-  - name: dv-ci
+  - name: test-job
     type: manifest
     steps:
-      - GET: dv-repo
-      - PUT: dv-img
-  - name: box-ci
-    type: manifest
-    steps:
-      - GET: box-repo
-      - PUT: box-img
+      - GET: image1-test
+      - GET: image2-test
+      - GET: image3-test
+      - GET: triggertest2
 
-  - name: dv-man
+  - name: pipe-man
     type: manifest
     steps:
-      - GET: dv-img
-      - GET: trigger-test-deploy-dv
-      - GET: dv-img-opts
-      - PUT: dv-test-ecs
-  - name: box-man
-    type: manifest
-    steps:
-      - GET: box-img
-      - GET: box-img-opts
-      - PUT: box-test-triton
-      - PUT: box-test-aws-ecs
+      - GET: pipe1-image
+      - GET: pipe1-opts
+      - GET: pipe1-params
+        applyTo:
+          - pipe1-image
+      - GET: trigger-dv-man
 
-  - name: box-test-triton
+  - name: test-job1
     type: manifest
     steps:
-      - GET: box-man
-      - GET: trigger-test-deploy-box
-      - GET: box-t-tpc-params
-      - GET: box-t-params
-      - GET: env-test-triton
-  - name: box-test-aws-ecs
+      - GET: test-job
+      - GET: pipe1-image
+
+  - name: test-job2
     type: manifest
     steps:
-      - GET: box-man
-      - GET: trigger-test-deploy-box
-      - GET: box-t-params
-      - GET: box-t-ecs-params
-      - GET: env-test-ecs
-  - name: dv-test-ecs
-    type: manifest
+      - GET: test-job1
+      - GET: image4-test
+      - PUT: test1
+
+  - name: pipe-test
+    type: ecsDeploy
     steps:
-      - GET: dv-man
-      - GET: env-test-ecs
-      - GET: trigger-test-deploy-dv
-      - GET: dv-params
+      - GET: pipe-man
+      - GET: env-test
