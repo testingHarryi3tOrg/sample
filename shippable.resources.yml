@@ -2,143 +2,161 @@ resources:
   - name: dv-repo
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: box-repo
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: dv-img
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: trigger-test-deploy
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1-dv
+    initialVersion:
+      versionName: latest.1-dv
 
   - name: dv-img-opts
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: box-img
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: box-img-opts
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: trigger-test-deploy
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1-box
+    initialVersion:
+      versionName: latest.1-box
 
   - name: box-t-tpc-params
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: box-t-params
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: env-test-triton
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: trigger-test-deploy
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1-box
+    initialVersion:
+      versionName: latest.1-box
 
   - name: box-t-params
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: box-t-ecs-params
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: env-test-ecs
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: env-test-ecs
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
 
   - name: trigger-test-deploy
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1-dv
+    initialVersion:
+      versionName: latest.1-dv
 
   - name: dv-params
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+      versionName: latest.1
