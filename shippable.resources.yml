@@ -2,39 +2,44 @@ resources:
   - name: s1
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest.1
+    initialVersion:
+        versionName: latest.1
 
   - name: s2
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest
+    initialVersion:
+        versionName: latest
 
   - name: s3
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest
+    initialVersion:
+        versionName: latest
 
   - name: s4
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest
+    initialVersion:
+        versionName: latest
 
   - name: s5
     type: image
     integration: dockerhub
-    source:
-      name: "library/busybox"
+    pointer:
+      sourceName: "library/busybox"
       isPull: true
-      tag: latest
+    initialVersion:
+        versionName: latest

@@ -1,5 +1,5 @@
 triggers:
    - name: job1-trigger
      type: trigger
-     source:
+     pointer:
        counter: 1
