@@ -2,17 +2,20 @@ jobs:
   - name: dv-ci
     type: manifest
     steps:
+      - TASK: managed
       - GET: dv-repo
       - PUT: dv-img
   - name: box-ci
     type: manifest
     steps:
+      - TASK: managed
       - GET: box-repo
       - PUT: box-img
 
   - name: dv-man
     type: manifest
     steps:
+      - TASK: managed
       - GET: dv-img
       - GET: trigger-test-deploy-dv
       - GET: dv-img-opts
@@ -20,6 +23,7 @@ jobs:
   - name: box-man
     type: manifest
     steps:
+      - TASK: managed
       - GET: box-img
       - GET: box-img-opts
       - PUT: box-test-triton
@@ -28,6 +32,7 @@ jobs:
   - name: box-test-triton
     type: manifest
     steps:
+      - TASK: managed
       - GET: box-man
       - GET: trigger-test-deploy-box
       - GET: box-t-tpc-params
@@ -36,6 +41,7 @@ jobs:
   - name: box-test-aws-ecs
     type: manifest
     steps:
+      - TASK: managed
       - GET: box-man
       - GET: trigger-test-deploy-box
       - GET: box-t-params
@@ -44,6 +50,7 @@ jobs:
   - name: dv-test-ecs
     type: manifest
     steps:
+      - TASK: managed
       - GET: dv-man
       - GET: env-test-ecs
       - GET: trigger-test-deploy-dv
