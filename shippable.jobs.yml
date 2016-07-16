@@ -5,6 +5,8 @@ jobs:
       - GET: dv-repo
       - TASK: managed
       - PUT: dv-img
+      - PUT: dv-test-ecs
+      - PUT: box-test-triton
   - name: box-ci
     type: manifest
     steps:
@@ -33,6 +35,7 @@ jobs:
     type: manifest
     steps:
       - GET: box-man
+      - GET: dv-ci
       - TASK: managed
       - GET: trigger-test-deploy-box
       - GET: box-t-tpc-params
@@ -51,6 +54,7 @@ jobs:
     type: manifest
     steps:
       - GET: dv-man
+      - GET: dv-ci
       - TASK: managed
       - GET: env-test-ecs
       - GET: trigger-test-deploy-dv
