@@ -160,3 +160,12 @@ resources:
       isPull: true
     initialVersion:
       versionName: latest.1
+
+  - name: trigger-test-deploy-dv
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/busybox"
+      isPull: true
+    initialVersion:
+      versionName: latest.1
