@@ -39,7 +39,7 @@ jobs:
       - TASK: managed
       - IN: trigger-test-deploy-box
       - IN: box-t-tpc-params
-      - IN: box-t-params
+      #- IN: box-t-params
       - IN: env-test-triton
   - name: box-test-aws-ecs
     type: manifest
