@@ -49,7 +49,7 @@ jobs:
       - IN: trigger-test-deploy-box
       - IN: box-t-params
       - IN: box-t-ecs-params
-      - IN: env-test-ecs
+      #- IN: env-test-ecs
   - name: dv-test-ecs
     type: manifest
     steps:
