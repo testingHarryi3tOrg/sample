@@ -2,60 +2,60 @@ jobs:
   - name: dv-ci
     type: manifest
     steps:
-      - GET: dv-repo
+      - IN: dv-repo
       - TASK: managed
-      - PUT: dv-img
-      - PUT: dv-test-ecs
-      - PUT: box-test-triton
+      - OUT: dv-img
+      - OUT: dv-test-ecs
+      - OUT: box-test-triton
   - name: box-ci
     type: manifest
     steps:
-      - GET: box-repo
+      - IN: box-repo
       - TASK: managed
-      - PUT: box-img
+      - OUT: box-img
 
   - name: dv-man
     type: manifest
     steps:
-      - GET: dv-img
+      - IN: dv-img
       - TASK: managed
-      - GET: trigger-test-deploy-dv
-      - GET: dv-img-opts
-      - PUT: dv-test-ecs
+      - IN: trigger-test-deploy-dv
+      - IN: dv-img-opts
+      - OUT: dv-test-ecs
   - name: box-man
     type: manifest
     steps:
-      - GET: box-img
+      - IN: box-img
       - TASK: managed
-      - GET: box-img-opts
-      - PUT: box-test-triton
-      - PUT: box-test-aws-ecs
+      - IN: box-img-opts
+      - OUT: box-test-triton
+      - OUT: box-test-aws-ecs
 
   - name: box-test-triton
     type: manifest
     steps:
-      - GET: box-man
-      - GET: dv-ci
+      - IN: box-man
+      - IN: dv-ci
       - TASK: managed
-      - GET: trigger-test-deploy-box
-      - GET: box-t-tpc-params
-      - GET: box-t-params
-      - GET: env-test-triton
+      - IN: trigger-test-deploy-box
+      - IN: box-t-tpc-params
+      - IN: box-t-params
+      - IN: env-test-triton
   - name: box-test-aws-ecs
     type: manifest
     steps:
-      - GET: box-man
+      - IN: box-man
       - TASK: managed
-      - GET: trigger-test-deploy-box
-      - GET: box-t-params
-      - GET: box-t-ecs-params
-      - GET: env-test-ecs
+      - IN: trigger-test-deploy-box
+      - IN: box-t-params
+      - IN: box-t-ecs-params
+      - IN: env-test-ecs
   - name: dv-test-ecs
     type: manifest
     steps:
-      - GET: dv-man
-      - GET: dv-ci
+      - IN: dv-man
+      - IN: dv-ci
       - TASK: managed
-      - GET: env-test-ecs
-      - GET: trigger-test-deploy-dv
-      - GET: dv-params
+      - IN: env-test-ecs
+      - IN: trigger-test-deploy-dv
+      - IN: dv-params
