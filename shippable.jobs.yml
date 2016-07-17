@@ -7,6 +7,7 @@ jobs:
       - OUT: dv-img
       - OUT: dv-test-ecs
       - OUT: box-test-triton
+      - OUT: dv-img-opts
   - name: box-ci
     type: manifest
     steps:
@@ -20,7 +21,7 @@ jobs:
       - IN: dv-img
       - TASK: managed
       - IN: trigger-test-deploy-dv
-      - IN: dv-img-opts
+      #- IN: dv-img-opts
       - OUT: dv-test-ecs
   - name: box-man
     type: manifest
