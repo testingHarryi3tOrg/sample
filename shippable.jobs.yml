@@ -26,6 +26,8 @@ jobs:
       - IN: trigger-test-deploy-dv
       #- IN: dv-img-opts
       - OUT: dv-test-ecs
+      - OUT: dv-params
+      - OUT: env-test-ecs
   - name: box-man
     type: manifest
     steps:
