@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: dv-repo
+      - IN: r1
       - TASK: managed
       - OUT: dv-img
       - OUT: dv-test-ecs
@@ -12,6 +13,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-repo
+      - IN: r1
       - TASK: managed
       - OUT: box-img
 
@@ -19,6 +21,7 @@ jobs:
     type: manifest
     steps:
       - IN: dv-img
+      - IN: r1
       - TASK: managed
       - IN: trigger-test-deploy-dv
       #- IN: dv-img-opts
@@ -27,6 +30,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-img
+      - IN: r1
       - TASK: managed
       - IN: box-img-opts
       - OUT: box-test-triton
@@ -36,6 +40,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-man
+      - IN: r1
       - IN: dv-ci
       - TASK: managed
       - IN: trigger-test-deploy-box
@@ -46,6 +51,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-man
+      - IN: r1
       - TASK: managed
       - IN: trigger-test-deploy-box
       - IN: box-t-params
@@ -55,6 +61,7 @@ jobs:
     type: manifest
     steps:
       - IN: dv-man
+      - IN: r1
       - IN: dv-ci
       - TASK: managed
       - IN: env-test-ecs
