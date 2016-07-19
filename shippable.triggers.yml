@@ -2,8 +2,8 @@ triggers:
    - name: job1-trigger
      type: trigger
      pointer:
-       counter: 1
+       counter: 2
    - name: job2-trigger
      type: trigger
      pointer:
-       counter: 1
+       counter: 2
