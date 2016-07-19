@@ -36,6 +36,7 @@ jobs:
     steps:
       - IN: box-img
       - IN: r1
+      - IN: job1-trigger
       - TASK: managed
       - IN: box-img-opts
       - OUT: box-test-triton
