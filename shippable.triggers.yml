@@ -2,7 +2,7 @@ triggers:
    - name: job1-trigger
      type: trigger
      pointer:
-       counter: 2
+       counter: 3
    - name: job2-trigger
      type: trigger
      pointer:
