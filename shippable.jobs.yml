@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: dv-repo
       - IN: r1
+      - IN: job2-trigger
       - TASK: managed
       - OUT: dv-img
       - OUT: dv-test-ecs
@@ -14,6 +15,7 @@ jobs:
     steps:
       - IN: box-repo
       - IN: r1
+      - IN: job1-trigger
       - TASK: managed
       - OUT: box-img
 

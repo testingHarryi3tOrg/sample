@@ -3,3 +3,7 @@ triggers:
      type: trigger
      pointer:
        counter: 1
+   - name: job2-trigger
+     type: trigger
+     pointer:
+       counter: 1
