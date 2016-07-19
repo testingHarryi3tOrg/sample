@@ -74,3 +74,11 @@ jobs:
       - IN: env-test-ecs
       - IN: trigger-test-deploy-dv
       - IN: dv-params
+      - OUT: r2
+
+  - name: dv-test2
+    type: manifest
+    steps:
+      - IN: dv-ci
+      - IN: r2
+      - TASK: managed
