@@ -1,5 +1,15 @@
 triggers:
-   - name: job1-trigger
+   - name: triggerTest
      type: trigger
+     source:
+       counter: 1
+
+   - name: trigger
+     type: prodTrigger
+     source:
+       counter: 1
+
+   - name: triggerTest
+     type: betaTrigger
      source:
        counter: 1
