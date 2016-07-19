@@ -33,15 +33,15 @@ jobs:
       - TASK: managed
 
 
-  - name: ddc-test
-    type: manifest
-    steps:
-      - IN: simple-mani
-      - IN: betaReplicas
-      - IN: myDdcCluster
-      - IN: betaParams
-      - IN: betaOpts
-      - TASK: managed
+  # - name: ddc-test
+  #   type: manifest
+  #   steps:
+  #     - IN: simple-mani
+  #     - IN: betaReplicas
+  #     - IN: myDdcCluster
+  #     - IN: betaParams
+  #     - IN: betaOpts
+  #     - TASK: managed
 
   - name: testRelease
     type: manifest
