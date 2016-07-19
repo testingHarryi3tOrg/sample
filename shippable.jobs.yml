@@ -24,6 +24,7 @@ jobs:
     steps:
       - IN: dv-img
       - IN: r1
+      - IN: job2-trigger
       - TASK: managed
       - IN: trigger-test-deploy-dv
       #- IN: dv-img-opts
@@ -56,6 +57,7 @@ jobs:
     steps:
       - IN: box-man
       - IN: r1
+      - IN: job1-trigger
       - TASK: managed
       - IN: trigger-test-deploy-box
       - IN: box-t-params
