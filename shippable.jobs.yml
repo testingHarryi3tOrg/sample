@@ -79,6 +79,7 @@ jobs:
       - OUT: r2
     flags:
       - dv
+      - test
 
   # - name: dv-test2
   #   type: manifest
