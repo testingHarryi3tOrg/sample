@@ -10,7 +10,7 @@ resources:
     flags:
       - dv
       - temp
-      - temp2
+      - temp3
 
   - name: box-repo
     type: image
