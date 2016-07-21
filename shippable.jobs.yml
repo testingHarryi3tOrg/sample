@@ -77,6 +77,8 @@ jobs:
       - IN: trigger-test-deploy-dv
       - IN: dv-params
       - OUT: r2
+    - flags:
+      - dv
 
   # - name: dv-test2
   #   type: manifest
