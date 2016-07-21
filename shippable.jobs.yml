@@ -10,6 +10,8 @@ jobs:
       - OUT: dv-test-ecs
       - OUT: box-test-triton
       - OUT: dv-img-opts
+    flags:
+      - dv
   - name: box-ci
     type: manifest
     steps:
