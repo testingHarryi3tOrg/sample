@@ -193,6 +193,8 @@ resources:
       isPull: true
     initialVersion:
       versionName: latest.1
+    flags:
+      - dv
 
   - name: r1
     type: image
