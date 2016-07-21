@@ -179,7 +179,7 @@ resources:
       sourceName: "library/busybox"
       isPull: true
     initialVersion:
-      versionName: latest.1
+      versionName: latest.2
     flags:
       - dv
 
