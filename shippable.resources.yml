@@ -177,7 +177,7 @@ resources:
     integration: dockerhub
     pointer:
       sourceName: "library/busybox"
-      isPull: true
+      isPull: false
     initialVersion:
       versionName: latest.2
     flags:
