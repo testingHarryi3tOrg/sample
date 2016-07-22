@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - dv
@@ -16,7 +16,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -27,7 +27,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - dv
@@ -38,7 +38,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1-dv
 
   - name: dv-img-opts
@@ -47,7 +47,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - dv
@@ -58,7 +58,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - dv
@@ -69,7 +69,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -81,7 +81,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1-box
 
   - name: box-t-tpc-params
@@ -90,7 +90,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -101,7 +101,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -112,7 +112,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
 
   - name: trigger-test-deploy
@@ -121,7 +121,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1-box
 
   - name: box-t-params
@@ -130,7 +130,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -141,7 +141,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - box
@@ -152,7 +152,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
 
   - name: env-test-ecs
@@ -161,7 +161,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
 
   - name: trigger-test-deploy
@@ -170,7 +170,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1-dv
 
   - name: dv-params
@@ -179,7 +179,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: false
-    initialVersion:
+    seed:
       versionName: latest.2
     flags:
       - dv
@@ -191,7 +191,7 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
     flags:
       - dv
@@ -202,5 +202,5 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: true
-    initialVersion:
+    seed:
       versionName: latest.1
