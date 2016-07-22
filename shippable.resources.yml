@@ -73,6 +73,7 @@ resources:
       versionName: latest.1
     flags:
       - box
+      - box-img-opts
 
   - name: trigger-test-deploy
     type: image
@@ -182,6 +183,7 @@ resources:
       versionName: latest.2
     flags:
       - dv
+      - dv-params
 
   - name: trigger-test-deploy-dv
     type: image
