@@ -123,6 +123,15 @@ resources:
       isPull: true
     seed:
       versionName: latest.1-box
+  
+  - name: trigger-test-deploy-box
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/busybox"
+      isPull: true
+    seed:
+      versionName: latest.1-box
 
   - name: box-t-params
     type: image
