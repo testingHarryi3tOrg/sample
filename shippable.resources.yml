@@ -31,6 +31,7 @@ resources:
       versionName: latest.1
     flags:
       - dv
+      - dv-img
 
   - name: trigger-test-deploy
     type: image
@@ -40,6 +41,8 @@ resources:
       isPull: true
     seed:
       versionName: latest.1-dv
+    flags:
+      - trigger-test-deploy
 
   - name: dv-img-opts
     type: image
@@ -51,6 +54,7 @@ resources:
       versionName: latest.1
     flags:
       - dv
+      - dv-img-opts
 
   - name: box-img
     type: image
@@ -61,7 +65,7 @@ resources:
     seed:
       versionName: latest.1
     flags:
-      - dv
+      - box
 
   - name: box-img-opts
     type: image
@@ -75,15 +79,6 @@ resources:
       - box
       - box-img-opts
 
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1-box
-
   - name: box-t-tpc-params
     type: image
     integration: dockerhub
@@ -94,6 +89,7 @@ resources:
       versionName: latest.1
     flags:
       - box
+      - box-t-tpc-params
 
   - name: box-t-params
     type: image
@@ -105,6 +101,7 @@ resources:
       versionName: latest.1
     flags:
       - box
+      - box-t-params
 
   - name: env-test-triton
     type: image
@@ -114,15 +111,8 @@ resources:
       isPull: true
     seed:
       versionName: latest.1
-
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1-box
+    flags:
+      - env-test-triton
   
   - name: trigger-test-deploy-box
     type: image
@@ -132,17 +122,8 @@ resources:
       isPull: true
     seed:
       versionName: latest.1-box
-
-  - name: box-t-params
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1
     flags:
-      - box
+      - trigger-test-deploy-box
 
   - name: box-t-ecs-params
     type: image
@@ -154,6 +135,7 @@ resources:
       versionName: latest.1
     flags:
       - box
+      - box-t-ecs-params
 
   - name: env-test-ecs
     type: image
@@ -163,24 +145,8 @@ resources:
       isPull: true
     seed:
       versionName: latest.1
-
-  - name: env-test-ecs
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1
-
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1-dv
+    flags:
+      - env-test-ecs
 
   - name: dv-params
     type: image
@@ -204,6 +170,7 @@ resources:
       versionName: latest.1
     flags:
       - dv
+      - trigger-test-deploy-dv
 
   - name: r1
     type: image
@@ -213,6 +180,8 @@ resources:
       isPull: true
     seed:
       versionName: latest.1
+    flags:
+      - r1
       
   - name: r2
     type: image
@@ -222,3 +191,5 @@ resources:
       isPull: true
     seed:
       versionName: master.1
+    flags:
+      - r2
