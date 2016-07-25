@@ -9,7 +9,7 @@ resources:
       versionName: latest.1
     flags:
       - dv
-      - temp
+      - temp2
 
   - name: box-repo
     type: image
