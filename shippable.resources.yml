@@ -33,17 +33,6 @@ resources:
       - dv
       - dv-img
 
-  - name: trigger-test-deploy
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/busybox"
-      isPull: true
-    seed:
-      versionName: latest.1-dv
-    flags:
-      - trigger-test-deploy
-
   - name: dv-img-opts
     type: image
     integration: dockerhub
