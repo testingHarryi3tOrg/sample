@@ -2,32 +2,7 @@ jobs:
   - name: job1
     type: manifest
     steps:
-      - GET: s1
-      - PUT: s3
-      - PUT: s4
-      - GET: job1-trigger
-
-  - name: job2
-    type: manifest
-    steps:
-      - GET: s1
-      - PUT: s3
-      - PUT: s4
-
-  - name: job3
-    type: manifest
-    steps:
-      - GET: s2
-      - GET: s3
-      - PUT: s5
-
-  - name: job4
-    type: manifest
-    steps:
-      - GET: s5
-      - GET: s3
-      - GET: job1
-
+      - IN: s1
 
 
 
