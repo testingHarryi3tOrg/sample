@@ -1,6 +1,6 @@
 jobs:
   - name: job1
-    type: manifest
+    type: runSh
     steps:
       - IN: s1
 
