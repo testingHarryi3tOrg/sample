@@ -1,15 +1,15 @@
 jobs:
-  - name: dv-ci
-    type: manifest
-    steps:
-      - IN: dv-repo
-      - IN: r1
-      - IN: job2-trigger
-      - TASK: managed
-      - OUT: dv-img
-      - OUT: dv-test-ecs
-      - OUT: box-test-triton
-      - OUT: dv-img-opts
+  # - name: dv-ci
+  #   type: manifest
+  #   steps:
+  #     - IN: dv-repo
+  #     - IN: r1
+  #     - IN: job2-trigger
+  #     - TASK: managed
+  #     - OUT: dv-img
+  #     - OUT: dv-test-ecs
+  #     - OUT: box-test-triton
+  #     - OUT: dv-img-opts
     flags:
       - dv
   - name: box-ci
