@@ -1,17 +1,17 @@
 jobs:
-  - name: dv-ci
-    type: manifest
-    steps:
-      - IN: dv-repo
-      - IN: r1
-      - IN: job2-trigger
-      - TASK: managed
-      - OUT: dv-img
-      - OUT: dv-test-ecs
-      - OUT: box-test-triton
-      - OUT: dv-img-opts
-    flags:
-      - dv
+  # - name: dv-ci
+  #   type: manifest
+  #   steps:
+  #     - IN: dv-repo
+  #     - IN: r1
+  #     - IN: job2-trigger
+  #     - TASK: managed
+  #     - OUT: dv-img
+  #     - OUT: dv-test-ecs
+  #     - OUT: box-test-triton
+  #     - OUT: dv-img-opts
+  #   flags:
+  #     - dv
   - name: box-ci
     type: manifest
     steps:
@@ -21,18 +21,18 @@ jobs:
       - TASK: managed
       - OUT: box-img
 
-  - name: dv-man
-    type: manifest
-    steps:
-      - IN: dv-img
-      - IN: r1
-      - IN: job2-trigger
-      - TASK: managed
-      - IN: trigger-test-deploy-dv
-      #- IN: dv-img-opts
-      - OUT: dv-test-ecs
-      - OUT: dv-params
-      - OUT: env-test-ecs
+  # - name: dv-man
+  #   type: manifest
+  #   steps:
+  #     - IN: dv-img
+  #     - IN: r1
+  #     - IN: job2-trigger
+  #     - TASK: managed
+  #     - IN: trigger-test-deploy-dv
+  #     #- IN: dv-img-opts
+  #     - OUT: dv-test-ecs
+  #     - OUT: dv-params
+  #     - OUT: env-test-ecs
   - name: box-man
     type: manifest
     steps:
@@ -66,19 +66,19 @@ jobs:
       - IN: box-t-params
       - IN: box-t-ecs-params
       #- IN: env-test-ecs
-  - name: dv-test-ecs
-    type: manifest
-    steps:
-      - IN: dv-man
-      - IN: r1
-      - IN: dv-ci
-      - TASK: managed
-      - IN: env-test-ecs
-      - IN: trigger-test-deploy-dv
-      - IN: dv-params
-      - OUT: r2
-    flags:
-      - dv
+  # - name: dv-test-ecs
+  #   type: manifest
+  #   steps:
+  #     - IN: dv-man
+  #     - IN: r1
+  #     - IN: dv-ci
+  #     - TASK: managed
+  #     - IN: env-test-ecs
+  #     - IN: trigger-test-deploy-dv
+  #     - IN: dv-params
+  #     - OUT: r2
+  #   flags:
+  #     - dv
   #     - test
 
   # - name: dv-test2
