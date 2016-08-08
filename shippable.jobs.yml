@@ -37,14 +37,17 @@ jobs:
   #     - OUT: r2
   #   flags:
   #     - dv
-      
+
   - name: box-ci
-    type: manifest
+    type: runSH
     steps:
       - IN: box-repo
       - IN: r1
       - IN: job1-trigger
-      - TASK: managed
+      - TASK:
+        - script: sudo apt-get install tree
+        - script: tree
+        - script: tree -F IN
       - OUT: box-img
 
   - name: box-man
