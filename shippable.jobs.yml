@@ -39,7 +39,7 @@ jobs:
       - dv
 
   - name: box-ci
-    type: runSH
+    type: runSh
     steps:
       - IN: box-repo
       - IN: r1
