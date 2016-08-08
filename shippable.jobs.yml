@@ -41,14 +41,10 @@ jobs:
   - name: box-ci
     type: runSh
     steps:
-      - IN: box-repo
-      - IN: r1
-      - IN: job1-trigger
       - TASK:
         - script: sudo apt-get install tree
         - script: tree
         - script: tree -F IN
-      - OUT: box-img
 
   - name: box-man
     type: manifest
