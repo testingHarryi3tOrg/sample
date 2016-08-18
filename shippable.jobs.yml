@@ -5,6 +5,13 @@ jobs:
       - IN: s1
       - IN: docker-creds
       - IN: slack-notifications
+      - TASK:
+        - script: sudo apt-get install -y jq
+        - script: docker pull harryi3t/busybox
+    on_success:
+      - echo 'on success !!!!!'
+    on_failure:
+      - echo 'Failed job .... :('
 
 
 
