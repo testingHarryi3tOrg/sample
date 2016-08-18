@@ -3,6 +3,8 @@ jobs:
     type: runSh
     steps:
       - IN: s1
+      - IN: docker-creds
+      - IN: slack-notifications
 
 
 
