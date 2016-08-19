@@ -4,7 +4,6 @@ jobs:
     steps:
       - IN: s1
       - IN: docker-creds
-      - IN: slack-notifications
       - TASK:
         - script: sudo apt-get install -y jq
         - script: docker pull harryi3t/busybox
