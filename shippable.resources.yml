@@ -16,10 +16,10 @@ resources:
     seed:
       versionName: latest
   
-  - name: slack-notifications
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#slack-test"
+  # - name: slack-notifications
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#slack-test"
   
