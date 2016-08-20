@@ -1,9 +1,9 @@
 triggers:
    - name: job1-trigger
      type: trigger
-     pointer:
+     version:
        counter: 3
    - name: job2-trigger
      type: trigger
-     pointer:
+     version:
        counter: 2
