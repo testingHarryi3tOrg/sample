@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: dv-repo
       - IN: r1
-      - IN: job2-trigger
+      # - IN: job2-trigger
       - TASK: managed
       - OUT: dv-img
       - OUT: dv-test-ecs
@@ -17,7 +17,7 @@ jobs:
     steps:
       - IN: dv-img
       - IN: r1
-      - IN: job2-trigger
+      # - IN: job2-trigger
       - TASK: managed
       - IN: trigger-test-deploy-dv
       #- IN: dv-img-opts
@@ -51,7 +51,7 @@ jobs:
     steps:
       - IN: box-img
       - IN: r1
-      - IN: job1-trigger
+      # - IN: job1-trigger
       - TASK: managed
       - IN: box-img-opts
       - OUT: box-test-triton
@@ -73,7 +73,7 @@ jobs:
     steps:
       - IN: box-man
       - IN: r1
-      - IN: job1-trigger
+      # - IN: job1-trigger
       - TASK: managed
       - IN: trigger-test-deploy-box
       - IN: box-t-params
