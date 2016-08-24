@@ -9,7 +9,6 @@ jobs:
     on_failure:
       - script: echo 'failed runSh'
 
-jobs:
   - name: runCI
     type: runCI
     steps:
@@ -19,7 +18,6 @@ jobs:
       - script: echo 'successful runCI'
     on_failure:
       - script: echo 'failed runCI'
-jobs:
   - name: release
     type: release
     steps:
@@ -30,7 +28,6 @@ jobs:
     on_failure:
       - script: echo 'failed release'
 
-jobs:
   - name: rSync
     type: rSync
     steps:
@@ -41,7 +38,6 @@ jobs:
     on_failure:
       - script: echo 'failed rSync'
 
-jobs:
   - name: deploy
     type: deploy
     steps:
@@ -52,7 +48,6 @@ jobs:
     on_failure:
       - script: echo 'failed deploy'
 
-jobs:
   - name: manifest
     type: manifest
     steps:
