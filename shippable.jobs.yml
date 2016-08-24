@@ -2,6 +2,10 @@ jobs:
   - name: runSh
     type: runSh
     steps:
+      - IN:
+        - gitRepo
+      - OUT:
+        - image
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
@@ -12,6 +16,12 @@ jobs:
   - name: release
     type: release
     steps:
+      - IN:
+        - gitRepo
+        - dockerOptions
+        - integration
+      - OUT:
+        - image
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
@@ -22,6 +32,12 @@ jobs:
   - name: deploy
     type: deploy
     steps:
+      - IN:
+        - gitRepo
+        - params
+        - cluster
+      - OUT:
+        - image
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
@@ -32,6 +48,12 @@ jobs:
   - name: manifest
     type: manifest
     steps:
+      - IN:
+        - gitRepo
+        - replicas
+        - version
+      - OUT:
+        - image
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:

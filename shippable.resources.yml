@@ -37,16 +37,6 @@ resources:
     flags:
       - params
 
-  - name: image
-    type: image
-    integration: dockerhub
-    pointer:
-      sourceName: "library/nginx"
-    seed:
-      versionName: latest
-    flags:
-      - image
-
   - name: replicas
     type: replicas
     version:
