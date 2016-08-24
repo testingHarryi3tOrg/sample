@@ -3,7 +3,7 @@ jobs:
     type: runSh
     steps:
       - IN: gitRepo
-      - OUT: image
+      - IN: manifest
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
