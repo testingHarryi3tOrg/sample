@@ -72,9 +72,9 @@ resources:
 
   - name: cluster
     type: cluster
-    integration: ric03uec-ecs
+    integration: ship-aws
     pointer:
-      sourceName : "prod-aws" #name of the cluster we are deploying
+      sourceName : "prod-aws"
       region: "us-east-1"
     flags:
       - cluster
