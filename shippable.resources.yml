@@ -1,5 +1,14 @@
 resources:
-  - name: s1
+  - name: gitRepo
+    type: gitRepo
+    integration: git
+    pointer:
+      sourceName: "harryi3t/www"
+      branch: master
+    flags:
+      - gitRepo
+
+  - name: image
     type: image
     integration: dockerhub
     pointer:
@@ -7,19 +16,96 @@ resources:
       isPull: true
     seed:
       versionName: latest
-      
-  - name: docker-creds
+    flags:
+      - image
+
+  - name: dockerOptions
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 256
+      portMappings:
+        - "80:80"
+    flags:
+      - dockerOptions
+
+  - name: params
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+    flags:
+      - params
+
+  - name: image
     type: image
     integration: dockerhub
     pointer:
       sourceName: "library/nginx"
     seed:
       versionName: latest
-  
-  # - name: slack-notifications
-  #   type: notification
-  #   integration: slack
-  #   pointer:
-  #     recipients:
-  #       - "#slack-test"
-  
+    flags:
+      - image
+
+  - name: replicas
+    type: replicas
+    version:
+      count: 1
+    flags:
+      - replicas
+
+  # kickStart
+
+  - name: time
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - time
+
+  - name: version
+    type: version
+    seed:
+      versionName: "0.0.1-beta"
+    flags:
+      - version
+
+  # trigger
+
+  - name: cluster
+    type: cluster
+    integration: ric03uec-ecs
+    pointer:
+      sourceName : "prod-aws" #name of the cluster we are deploying
+      region: "us-east-1"
+    flags:
+      - cluster
+
+  # manifest
+
+  - name: notification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#slack-test"
+    flags:
+      - notification
+
+  # loadBalancer
+
+  - name: integration
+    type: integration
+    integration: slack
+    flags:
+      - integration
+
+  # runCI
+
+  # runSh
+
+  # release
+
+  # rSync
+
+  # deploy
