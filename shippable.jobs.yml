@@ -1,11 +1,4 @@
 jobs:
-  - name: managed
-    type: managed
-    on_success:
-      - script: echo 'successful managed'
-    on_failure:
-      - script: echo 'failed managed'
-
   - name: runSh
     type: runSh
     steps:
@@ -25,6 +18,7 @@ jobs:
       - script: echo 'successful runCI'
     on_failure:
       - script: echo 'failed runCI'
+
   - name: release
     type: release
     steps:
@@ -34,16 +28,6 @@ jobs:
       - script: echo 'successful release'
     on_failure:
       - script: echo 'failed release'
-
-  - name: rSyncSteps
-    type: rSyncSteps
-    steps:
-      - TASK:
-        - script: sudo apt-get install -y jq
-    on_success:
-      - script: echo 'successful rSyncSteps'
-    on_failure:
-      - script: echo 'failed rSyncSteps'
 
   - name: deploy
     type: deploy
