@@ -1,7 +1,6 @@
 jobs:
   - name: managed
     type: managed
-    steps:
     on_success:
       - script: echo 'successful managed'
     on_failure:
