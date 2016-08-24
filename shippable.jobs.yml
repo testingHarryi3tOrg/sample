@@ -9,16 +9,6 @@ jobs:
     on_failure:
       - script: echo 'failed runSh'
 
-  - name: runCI
-    type: runCI
-    steps:
-      - TASK:
-        - script: sudo apt-get install -y jq
-    on_success:
-      - script: echo 'successful runCI'
-    on_failure:
-      - script: echo 'failed runCI'
-
   - name: release
     type: release
     steps:
