@@ -19,7 +19,8 @@ jobs:
       - IN: gitRepo
       - IN: dockerOptions
       - IN: integration
-      - OUT: image
+      - IN: runSh
+      - IN: manifest
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
