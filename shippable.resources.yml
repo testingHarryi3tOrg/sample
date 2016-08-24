@@ -70,8 +70,6 @@ resources:
     flags:
       - version
 
-  # trigger
-
   - name: cluster
     type: cluster
     integration: ric03uec-ecs
@@ -80,8 +78,6 @@ resources:
       region: "us-east-1"
     flags:
       - cluster
-
-  # manifest
 
   - name: notification
     type: notification
@@ -99,13 +95,3 @@ resources:
     integration: slack
     flags:
       - integration
-
-  # runCI
-
-  # runSh
-
-  # release
-
-  # rSync
-
-  # deploy

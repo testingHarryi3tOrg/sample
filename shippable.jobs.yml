@@ -1,16 +1,64 @@
 jobs:
-  - name: job1
+  - name: runSh
     type: runSh
     steps:
-      - IN: s1
-      - IN: docker-creds
       - TASK:
         - script: sudo apt-get install -y jq
-        - script: docker pull harryi3t/busybox
     on_success:
-      - echo 'on success !!!!!'
+      - script: echo 'successful runSh'
     on_failure:
-      - echo 'Failed job .... :('
+      - script: echo 'failed runSh'
 
+jobs:
+  - name: runCI
+    type: runCI
+    steps:
+      - TASK:
+        - script: sudo apt-get install -y jq
+    on_success:
+      - script: echo 'successful runCI'
+    on_failure:
+      - script: echo 'failed runCI'
+jobs:
+  - name: release
+    type: release
+    steps:
+      - TASK:
+        - script: sudo apt-get install -y jq
+    on_success:
+      - script: echo 'successful release'
+    on_failure:
+      - script: echo 'failed release'
 
+jobs:
+  - name: rSync
+    type: rSync
+    steps:
+      - TASK:
+        - script: sudo apt-get install -y jq
+    on_success:
+      - script: echo 'successful rSync'
+    on_failure:
+      - script: echo 'failed rSync'
 
+jobs:
+  - name: deploy
+    type: deploy
+    steps:
+      - TASK:
+        - script: sudo apt-get install -y jq
+    on_success:
+      - script: echo 'successful deploy'
+    on_failure:
+      - script: echo 'failed deploy'
+
+jobs:
+  - name: manifest
+    type: manifest
+    steps:
+      - TASK:
+        - script: sudo apt-get install -y jq
+    on_success:
+      - script: echo 'successful manifest'
+    on_failure:
+      - script: echo 'failed manifest'
