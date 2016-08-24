@@ -21,6 +21,7 @@ jobs:
       - IN: integration
       - IN: runSh
       - IN: manifest
+      - OUT: gitRepo
       - TASK:
         - script: sudo apt-get install -y jq
     on_success:
