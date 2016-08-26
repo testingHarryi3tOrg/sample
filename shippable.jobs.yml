@@ -18,7 +18,7 @@ jobs:
     type: release
     steps:
       #- IN: gitRepo
-      - IN: dockerOptions
+      # - IN: dockerOptions
       - IN: integration
       - TASK:
         - script: sudo apt-get install -y jq
