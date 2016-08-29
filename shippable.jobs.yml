@@ -7,8 +7,6 @@ jobs:
       # - IN: job2-trigger
       - TASK: managed
       - OUT: dv-img
-      - OUT: dv-test-ecs
-      - OUT: box-test-triton
       - OUT: dv-img-opts
     flags:
       - dv
@@ -21,9 +19,7 @@ jobs:
       - TASK: managed
       - IN: trigger-test-deploy-dv
       #- IN: dv-img-opts
-      - OUT: dv-test-ecs
       - OUT: dv-params
-      - OUT: env-test-ecs
   - name: dv-test-ecs
     type: manifest
     steps:
@@ -54,8 +50,6 @@ jobs:
       # - IN: job1-trigger
       - TASK: managed
       - IN: box-img-opts
-      - OUT: box-test-triton
-      - OUT: box-test-aws-ecs
 
   - name: box-test-triton
     type: manifest
