@@ -3,8 +3,8 @@ resources:
     type: gitRepo
     integration: git
     pointer:
-      sourceName: "harryi3t/www"
-      branch: master
+      sourceName: "harryi3t/5134"
+      branch: quick
     flags:
       - gitRepo
 
@@ -18,70 +18,3 @@ resources:
       versionName: latest
     flags:
       - image
-
-  - name: dockerOptions
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 256
-      portMappings:
-        - "80:80"
-    flags:
-      - dockerOptions
-
-  - name: params
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "localhost:28017"
-    flags:
-      - params
-
-  - name: replicas
-    type: replicas
-    version:
-      count: 1
-    flags:
-      - replicas
-
-  # kickStart
-
-  - name: time
-    type: time
-    seed:
-      interval: "*/2 * * * *"
-    flags:
-      - time
-
-  - name: version
-    type: version
-    seed:
-      versionName: "0.0.1-beta"
-    flags:
-      - version
-
-  - name: cluster
-    type: cluster
-    integration: ship-aws
-    pointer:
-      sourceName : "prod-aws"
-      region: "us-east-1"
-    flags:
-      - cluster
-
-  - name: notification
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#slack-test"
-    flags:
-      - notification
-
-  # loadBalancer
-
-  - name: integration
-    type: integration
-    integration: slack
-    flags:
-      - integration
