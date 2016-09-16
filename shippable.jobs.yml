@@ -1,62 +1,12 @@
 jobs:
-  # - name: runSh
-  #   type: runSh
-  #   steps:
-  #     - IN: gitRepo
-  #     - IN: manifest
-  #     - TASK:
-  #       - script: sudo apt-get install -y jq
-  #     - OUT: dockerOptions
-  #     - OUT: params
-  #   on_success:
-  #     - script: echo 'successful runSh'
-  #     - NOTIFY: notification
-  #   on_failure:
-  #     - script: echo 'failed runSh'
-  #     - NOTIFY: notification
-
-  # - name: release
-  #   type: release
-  #   steps:
-  #     #- IN: gitRepo
-  #     - IN: dockerOptions
-  #     - IN: params
-  #     - IN: integration
-  #     - TASK:
-  #       - script: sudo apt-get install -y jq
-  #   on_success:
-  #     - script: echo 'successful release'
-  #     - NOTIFY: notification
-  #   on_failure:
-  #     - script: echo 'failed release'
-  #     - NOTIFY: notification
-
-  # - name: deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: gitRepo
-  #     - IN: cluster
-  #     - OUT: image
-  #     - TASK:
-  #       - script: sudo apt-get install -y jq
-  #   on_success:
-  #     - script: echo 'successful deploy'
-  #     - NOTIFY: notification
-  #   on_failure:
-  #     - script: echo 'failed deploy'
-  #     - NOTIFY: notification
-
-  - name: manifest
-    type: manifest
+  - name: runSh
+    type: runSh
     steps:
       - IN: gitRepo
-      - IN: replicas
-      - IN: version
+      - TASK:
+        - script: sudo apt-get install -y jq
       - OUT: image
-      - TASK: managed
     on_success:
-      - script: echo 'successful manifest'
-      - NOTIFY: notification
+      - script: echo 'successful runSh'
     on_failure:
-      - script: echo 'failed manifest'
-      - NOTIFY: notification
+      - script: echo 'failed runSh'
