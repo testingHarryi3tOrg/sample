@@ -1,0 +1,5 @@
+triggers:
+   - name: job1-trigger
+     type: trigger
+     version:
+       counter: 1
