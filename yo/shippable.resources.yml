@@ -1,7 +1,7 @@
 resources:
   - name: gitRepo
     type: gitRepo
-    integration: gitlab
+    integration: git
     pointer:
         sourceName: "harryi3t/5134"
         branch: master
