@@ -17,7 +17,7 @@ resources:
 
   - name: image
     type: image
-    integration: dockerhub
+    integration: docker
     pointer:
         sourceName: "library/busybox"
         isPull: true
