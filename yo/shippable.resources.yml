@@ -8,6 +8,13 @@ resources:
     flags:
         - gitRepo
 
+  - name: readme-file
+    type: file
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+
   - name: image
     type: image
     integration: dockerhub
@@ -21,7 +28,7 @@ resources:
 
   - name: dockerOptions
     type: dockerOptions
-    version: 
+    version:
         memory: 64
         cpuShares: 256
         portMappings:
@@ -36,7 +43,7 @@ resources:
             MONGO_API_URL: "localhost:28017"
     flags:
         - params
-    
+
   - name: replicas
     type: replicas
     version:
@@ -59,7 +66,7 @@ resources:
         versionName: "0.0.1-beta"
     flags:
         - version
-    
+
   - name: cluster
     type: cluster
     integration: ship-aws
@@ -68,7 +75,7 @@ resources:
         region: "us-east-1"
     flags:
         - cluster
-    
+
   - name: notification
     type: notification
     integration: slack
@@ -77,9 +84,9 @@ resources:
             - "#slack-test"
     flags:
         - notification
-    
+
     # loadBalancer
-    
+
   - name: integration
     type: integration
     integration: slack
