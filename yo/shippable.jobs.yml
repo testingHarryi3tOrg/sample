@@ -6,8 +6,41 @@ jobs:
         - IN: manifest
         - TASK:
             - script: sudo apt-get install -y jq
-        - OUT: dockerOptions
-        - OUT: params
+    on_success:
+        - script: echo 'successful runSh'
+        - NOTIFY: notification
+    on_failure:
+        - script: echo 'failed runSh'
+        - NOTIFY: notification
+  - name: runSh2
+    type: runSh
+    steps:
+        - IN: gitRepo
+        - IN: manifest
+        - TASK:
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get install mysql
+    on_success:
+        - script: echo 'successful runSh'
+        - NOTIFY: notification
+    on_failure:
+        - script: echo 'failed runSh'
+        - NOTIFY: notification
+        
+  - name: runSh3
+    type: runSh
+    steps:
+        - IN: gitRepo
+        - IN: manifest
+        - TASK:
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get update
+            - script: sudo apt-get install mysql
     on_success:
         - script: echo 'successful runSh'
         - NOTIFY: notification
