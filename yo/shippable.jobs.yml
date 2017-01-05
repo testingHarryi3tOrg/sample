@@ -57,21 +57,7 @@ jobs:
     on_failure:
         - script: echo 'failed release'
         - NOTIFY: notification
-    
-  - name: deploy
-    type: deploy
-    steps:
-        - IN: gitRepo
-        - IN: cluster
-        - OUT: image
-        - TASK:
-            - script: sudo apt-get install -y jq
-    on_success:
-        - script: echo 'successful deploy'
-        - NOTIFY: notification
-    on_failure:
-        - script: echo 'failed deploy'
-        - NOTIFY: notification
+
     
   - name: manifest
     type: manifest
