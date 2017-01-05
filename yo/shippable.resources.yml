@@ -67,15 +67,6 @@ resources:
     flags:
         - version
 
-  - name: cluster
-    type: cluster
-    integration: ship-aws
-    pointer:
-        sourceName : "prod-aws"
-        region: "us-east-1"
-    flags:
-        - cluster
-
   - name: notification
     type: notification
     integration: slack
