@@ -169,22 +169,22 @@ resources:
     seed:
       versionName: initial
   - name: unsed-res-11
-      type: file
-      flags:
-        - odd
-      pointer:
-        sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
-      seed:
-        versionName: initial
+    type: file
+    flags:
+      - odd
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
   - name: unsed-res-12
-      type: file
-      flags:
-        - even
-        - multiple-of-3
-      pointer:
-        sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
-      seed:
-        versionName: initial
+    type: file
+    flags:
+      - even
+      - multiple-of-3
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
   - name: unsed-res-13
     type: file
     flags:
