@@ -1,5 +1,5 @@
 jobs:
-  - name: runSh
+  - name: runSh-d1
     type: runSh
     steps:
         - IN: gitRepo
@@ -12,7 +12,7 @@ jobs:
     on_failure:
         - script: echo 'failed runSh'
         - NOTIFY: notification
-  - name: runSh2
+  - name: runSh2-d1
     type: runSh
     steps:
         - IN: gitRepo
@@ -27,7 +27,7 @@ jobs:
         - script: echo 'failed runSh'
         - NOTIFY: notification
 
-  - name: runSh3
+  - name: runSh3-d1
     type: runSh
     steps:
         - IN: runSh2
@@ -42,7 +42,7 @@ jobs:
         - script: echo 'failed runSh'
         - NOTIFY: notification
 
-  - name: release
+  - name: release-d1
     type: release
     steps:
         #- IN: gitRepo1
@@ -59,7 +59,7 @@ jobs:
         - NOTIFY: notification
 
 
-  - name: manifest
+  - name: manifest-d1
     type: manifest
     steps:
         - IN: gitRepo
