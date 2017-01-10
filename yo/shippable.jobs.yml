@@ -2,8 +2,8 @@ jobs:
   - name: runSh-d1
     type: runSh
     steps:
-        - IN: gitRepo
-        - IN: manifest
+        - IN: gitRepo-d1
+        - IN: manifest-d1
         - TASK:
             - script: sudo apt-get install -y jq
     on_success:
@@ -15,8 +15,8 @@ jobs:
   - name: runSh2-d1
     type: runSh
     steps:
-        - IN: gitRepo
-        - IN: manifest
+        - IN: gitRepo-d1
+        - IN: manifest-d1
         - TASK:
             - script: sudo apt-get update
             - script: sleep 60s
@@ -30,8 +30,8 @@ jobs:
   - name: runSh3-d1
     type: runSh
     steps:
-        - IN: runSh2
-        - OUT: unsed-res-1
+        - IN: runSh2-d1
+        - OUT: unsed-res-1-d1
         - TASK:
             - script: sudo apt-get update
             - script: sleep 5m
@@ -45,10 +45,10 @@ jobs:
   - name: release-d1
     type: release
     steps:
-        #- IN: gitRepo1
-        - IN: dockerOptions
-        - IN: params
-        - IN: integration
+        #- IN: gitRepo1-d1
+        - IN: dockerOptions-d1
+        - IN: params-d1
+        - IN: integration-d1
         - TASK:
             - script: sudo apt-get install -y jq
     on_success:
@@ -62,10 +62,10 @@ jobs:
   - name: manifest-d1
     type: manifest
     steps:
-        - IN: gitRepo
-        #- IN: replicas
-        #- IN: version
-        - OUT: image
+        - IN: gitRepo-d1
+        #- IN: replicas-d1
+        #- IN: version-d1
+        - OUT: image-d1
         - TASK: managed
     on_success:
         - script: echo 'successful manifest'
