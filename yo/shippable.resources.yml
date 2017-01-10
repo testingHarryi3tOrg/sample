@@ -83,7 +83,7 @@ resources:
     integration: slack
     flags:
         - integration
-        
+
   # Creating unused resources
   - name: unsed-res-1
     type: file
@@ -251,4 +251,87 @@ resources:
       sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
     seed:
       versionName: initial
-    
+  - name: unsed-res-21
+    type: file
+    flags:
+      - odd
+      - multiple-of-3
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-22
+    type: file
+    flags:
+      - even
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-23
+    type: file
+    flags:
+      - odd
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-24
+    type: file
+    flags:
+      - even
+      - multiple-of-3
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-25
+    type: file
+    flags:
+      - odd
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-26
+    type: file
+    flags:
+      - even
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-27
+    type: file
+    flags:
+      - odd
+      - multiple-of-3
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-28
+    type: file
+    flags:
+      - even
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-29
+    type: file
+    flags:
+      - odd
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
+  - name: unsed-res-30
+    type: file
+    flags:
+      - even
+      - multiple-of-3
+    pointer:
+      sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
+    seed:
+      versionName: initial
