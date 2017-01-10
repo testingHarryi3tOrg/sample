@@ -30,8 +30,8 @@ jobs:
   - name: runSh3
     type: runSh
     steps:
-        - IN: gitRepo
-        - IN: manifest
+        - IN: runSh2
+        - OUT: unsed-res-1
         - TASK:
             - script: sudo apt-get update
             - script: sleep 5m
@@ -45,7 +45,7 @@ jobs:
   - name: release
     type: release
     steps:
-        #- IN: gitRepo
+        #- IN: gitRepo1
         - IN: dockerOptions
         - IN: params
         - IN: integration
