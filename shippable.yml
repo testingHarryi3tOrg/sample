@@ -1,2 +1,4 @@
 build:
- - script: 'hello world'
+ ci:
+  - echo "Hello world"
+ 
