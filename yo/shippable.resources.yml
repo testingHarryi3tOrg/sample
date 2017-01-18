@@ -24,8 +24,7 @@ resources:
         isPull: true
     seed:
       versionName: latest.1
-    flags:
-        - image
+    flags: image
 
   - name: dockerOptions
     type: dockerOptions
@@ -43,7 +42,7 @@ resources:
         params:
             MONGO_API_URL: "localhost:28017"
     flags:
-        - params
+        params
 
   - name: replicas
     type: replicas
