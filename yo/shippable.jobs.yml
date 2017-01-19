@@ -47,7 +47,7 @@ jobs:
     steps:
         - IN: image
         - TASK: managed
-        bump: alpha
+          bump: alpha
     on_success:
         - script: echo 'successful release'
         - NOTIFY: notification
