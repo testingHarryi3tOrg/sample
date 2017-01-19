@@ -110,4 +110,9 @@ resources:
       sourceName: https://raw.githubusercontent.com/harryi3t/sample/master/README.md
     seed:
       versionName: initial
+ 
+  - name: alpha-ver
+    type: version
+    seed:
+      versionName: "1.0.0"
   
