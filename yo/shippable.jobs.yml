@@ -46,6 +46,7 @@ jobs:
     type: release
     steps:
         - IN: image
+        - IN: alpha-ver
         - TASK: managed
           bump: alpha
     on_success:
