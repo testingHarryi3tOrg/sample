@@ -42,22 +42,18 @@ jobs:
         - script: echo 'failed runSh'
         - NOTIFY: notification
 
-  - name: release
+  - name: rel-alpha
     type: release
     steps:
-        #- IN: gitRepo1
-        - IN: dockerOptions
-        - IN: params
-        - IN: integration
-        - TASK:
-            - script: sudo apt-get install -y jq
+        - IN: image
+        - TASK: managed
+        bump: alpha
     on_success:
         - script: echo 'successful release'
         - NOTIFY: notification
     on_failure:
         - script: echo 'failed release'
         - NOTIFY: notification
-
 
   - name: manifest
     type: manifest
