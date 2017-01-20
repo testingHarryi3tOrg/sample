@@ -27,7 +27,7 @@ jobs:
         - script: echo 'failed runSh'
         - NOTIFY: notification
 
-  - name: runSh3
+  - name: runSh3 
     type: runSh
     steps:
         - IN: runSh2
@@ -60,13 +60,28 @@ jobs:
     type: manifest
     steps:
         - IN: gitRepo
-        #- IN: replicas
-        #- IN: version
         - OUT: image
         - TASK: managed
     on_success:
         - script: echo 'successful manifest'
-        #- NOTIFY: notification
     on_failure:
         - script: echo 'failed manifest'
-        #- NOTIFY: notification
+
+  - name: manifest2
+    type: manifest
+    steps:
+        - IN: manifest
+        - TASK: managed
+
+  - name: manifest3
+    type: manifest
+    steps:
+        - IN: manifest2
+        - TASK: managed
+
+  - name: manifest4
+    type: manifest
+    steps:
+        - IN: manifest3
+        - TASK: managed
+        
