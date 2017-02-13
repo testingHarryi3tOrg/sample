@@ -1,6 +1,6 @@
 resources:
   - name: gitRepo5134
-    type: gitRepo5134
+    type: gitRepo
     integration: git
     pointer:
         sourceName: "harryi3t/5134"
