@@ -1,5 +1,5 @@
 jobs:  
-  - name: projectA_runCI
+  - name: sample_runCI
     type: runCI
     steps:
-      - OUT: projectB_runCI
+      - OUT: 5134_runCI
