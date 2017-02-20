@@ -81,6 +81,7 @@ jobs:
     type: manifest
     steps:
         - IN: manifest3
+        - IN: manifest
         - IN: gitRepo        
         - TASK: managed
         
