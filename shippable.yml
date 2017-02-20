@@ -1,5 +1,10 @@
-language: node_js
+# Language setting
+language: python
+
+# Version number
+python:
+  - 2.7
+
 build:
- ci:
-  - echo "Hello world"
- 
+  ci:
+    - python --version
