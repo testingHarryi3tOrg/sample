@@ -1,6 +1,6 @@
 # sample_pipelines
 
-test commit - 3
+test commit - 4
 
 i. Make sure your subscription has the `isNewPipeline: true`  
 ii. Sync your account (this is required to update gitlab with your subId)  
